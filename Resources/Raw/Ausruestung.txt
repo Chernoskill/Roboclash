@@ -1,0 +1,10 @@
+﻿//Waffen [Name];[Kosten];[Ausruestungstyp];[Elementtyp];[Schaden]
+Kanone;4;0;0;10
+Flammenwerfer;4;0;1;10
+Super Soaker;4;0;2;10
+Eisstrahl;4;0;3;10
+//Schilde [Name];[Kosten];[Ausruestungstyp];[Elementtyp];[Resistenz]
+Stahlschild;4;1;0;3
+Asbestschild;4;1;1;3
+Wasserschild;4;1;2;3
+Eisschild;4;1;3;3

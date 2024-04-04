@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Roboclash.Views.Assets"
+             Title="Assets">
+	<Grid RowSpacing="0">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="*" />
+			<RowDefinition Height="*" />
+		</Grid.RowDefinitions>
+		<ListView Grid.Row="0" x:Name="WaffenListView" SelectionMode="None" Header="Waffen">
+			<ListView.ItemTemplate>
+				<DataTemplate>
+					<ViewCell>
+						<Grid>
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="*" />
+								<ColumnDefinition Width="Auto" />
+							</Grid.ColumnDefinitions>
+							<Grid.RowDefinitions>
+								<RowDefinition Height="*" />
+								<RowDefinition Height="*" />
+							</Grid.RowDefinitions>
+
+							<Label Grid.Column="0" Grid.Row="0" Text="{Binding Name}" FontSize="18"/>
+							<Label Grid.Column="1" Grid.Row="0" Text="{Binding Kosten, StringFormat='Kosten: {0}'}" FontSize="18" HorizontalTextAlignment="End"/>
+							<Label Grid.Column="0" Grid.Row="1" Text="{Binding Kraft, StringFormat='Schaden: {0}'}" FontSize="18"/>
+							<Label Grid.Column="1" Grid.Row="1" Text="{Binding Elementtyp}" FontSize="18" HorizontalTextAlignment="End"/>
+
+						</Grid>
+					</ViewCell>
+				</DataTemplate>
+			</ListView.ItemTemplate>
+		</ListView>
+		<ListView Grid.Row="1" x:Name="SchildeListView" SelectionMode="None" Header="Schilde">
+			<ListView.ItemTemplate>
+				<DataTemplate>
+					<ViewCell>
+						<Grid>
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="*" />
+								<ColumnDefinition Width="Auto" />
+							</Grid.ColumnDefinitions>
+							<Grid.RowDefinitions>
+								<RowDefinition Height="*" />
+								<RowDefinition Height="*" />
+							</Grid.RowDefinitions>
+
+							<Label Grid.Column="0" Grid.Row="0" Text="{Binding Name}" FontSize="18"/>
+							<Label Grid.Column="1" Grid.Row="0" Text="{Binding Kosten, StringFormat='Kosten: {0}'}" FontSize="18" HorizontalTextAlignment="End"/>
+							<Label Grid.Column="0" Grid.Row="1" Text="{Binding Kraft, StringFormat='Resistenz: {0}'}" FontSize="18"/>
+							<Label Grid.Column="1" Grid.Row="1" Text="{Binding Elementtyp}" FontSize="18" HorizontalTextAlignment="End"/>
+
+						</Grid>
+					</ViewCell>
+				</DataTemplate>
+			</ListView.ItemTemplate>
+		</ListView>
+	</Grid>
+</ContentPage>
